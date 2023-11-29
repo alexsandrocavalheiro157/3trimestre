@@ -7,8 +7,15 @@ let contador = 0;
 
 while(contador<listaDeTeclas.length){
    
-    listaDeTeclas[contador].onclick = function(){
-        tocasom('#som_tecla_splash')
+    const tecla = listadeteclas[contador];
+    const instrumento = tecla.classlist[1];
+console.log(idaudio);
+
+const idaudio = `#som_${instrumento}`;
+
+
+    tecla.onclick = function(){
+        tocasom(idaudio);
     };
     contador = contador + 1;
 
